@@ -1,0 +1,34 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+form {
+
+  >input, 
+  >textarea {
+    width: 100%;
+    display: block;
+    padding: 5px 8px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+    background-color: #444;
+    &:focus {
+      border-color: rgb(0, 4, 255);
+    }
+}
+
+>textarea {
+  height: 10rem;
+  resize: none;
+  margin: 15px auto;
+}
+>button {
+  background-color: #444;
+}
+}
