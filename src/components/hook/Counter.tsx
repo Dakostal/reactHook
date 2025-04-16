@@ -1,30 +1,23 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 export const Сalculator = () => {
-    const [isCalc, setIsCalc] = useState([])
-    const [inputValue, setInputValue] = useState("");
+    const [isCalc, setIsCalc] = useState('')
+    const [inputValue, setInputValue] = useState('')
 
-    const result = () => {
-        if(inputValue.trim() === "") return;
-        setIsCalc([...isCalc, inputValue])
-        setInputValue("")
+    const calc = () => {
+        if (isCalc.trim() === '') return
+        setInputValue([...isCalc, inputValue])
+        setInputValue('')
+
+        const result = eval(isCalc)
+        setInputValue(result)
     }
 
-    return(
+    return (
         <div>
-            <input 
-                type="text"
-                value={inputValue}
-                onChange={(e)=> setInputValue(e.target.value)}
-            ></input>
-                <ul>
-                    {isCalc.map((rez, index)=> (
-                        <li key={index}>{rez}</li>
-                    ))}
-                </ul>
-
-            <button onClick={result}>Результат</button>
+            <input type="text" value={isCalc} onChange={(e) => setIsCalc(e.target.value)} />
+            <button onClick={calc}>Результат</button>
+            <p>{inputValue}</p>
         </div>
-
     )
 }
