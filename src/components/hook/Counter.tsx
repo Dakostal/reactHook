@@ -1,29 +1,38 @@
 import { useState } from "react"
 
-export const Сalculator = () => {
-    const [isCalc, setIsCalc] = useState([])
-    const [inputValue, setInputValue] = useState("");
 
-    const result = () => {
-        if(inputValue.trim() === "") return;
-        setIsCalc([...isCalc, inputValue])
-        setInputValue("")
-    }
+export const Сalculator = () => {
+const [arr, setArr] = useState('')
+const [input, setInput] = useState([])
+
+const open = () => {
+    if (arr === '') return;
+    setInput([...input, arr])
+     
+}
+
+const deleted = (index) => {
+    const filtered = input.filter(del=> del !== arr)
+    setInput(filtered)
+}
 
     return(
         <div>
             <input 
                 type="text"
-                value={inputValue}
-                onChange={(e)=> setInputValue(e.target.value)}
-            ></input>
-                <ul>
-                    {isCalc.map((rez, index)=> (
-                        <li key={index}>{rez}</li>
-                    ))}
-                </ul>
-
-            <button onClick={result}>Результат</button>
+                value={arr}
+                onChange={(e)=> setArr(e.target.value)}
+            />
+            <ul>
+                {input
+                // 
+                .map((list, index)=> (
+                    <li key={index}>{list}<button onClick={()=>deleted(index)}>Убавить</button></li>
+                ))
+                 }
+            </ul>
+            <button onClick={open}>Добавить</button>
+            
         </div>
 
     )
