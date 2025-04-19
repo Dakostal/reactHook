@@ -1,5 +1,4 @@
-import { useState } from "react"
-
+import { useState } from 'react'
 
 export const Сalculator = () => {
 const [arr, setArr] = useState('')
@@ -15,8 +14,7 @@ const deleted = (index) => {
     const filtered = input.filter(del=> del !== arr)
     setInput(filtered)
 }
-
-    return(
+    return (
         <div>
             <input 
                 type="text"
@@ -32,8 +30,6 @@ const deleted = (index) => {
                  }
             </ul>
             <button onClick={open}>Добавить</button>
-            
         </div>
-
     )
 }
