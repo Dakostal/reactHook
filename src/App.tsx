@@ -1,10 +1,10 @@
 import './App.scss'
-import { Сalculator } from './components/hook/Counter'
+import { Calculator } from './components/hook/Counter'
 
 function App() {
   return (
     <>
-    <Сalculator /> 
+    <Calculator /> 
     </>
   )
 }

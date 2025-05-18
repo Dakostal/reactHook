@@ -1,35 +1,21 @@
-import { useState } from 'react'
+// import { Focus } from "./focus"
+// import { Timer } from "./Timer"
+// import { PlayingСards } from "../playCard/PlayingСards"
+import { Count } from "./Count"
+// import { Counter } from "./Сounters"
+// import { List } from "./List"
 
-export const Сalculator = () => {
-const [arr, setArr] = useState('')
-const [input, setInput] = useState([])
+export const Calculator = () => {
 
-const open = () => {
-    if (arr === '') return;
-    setInput([...input, arr])
-     
-}
-
-const deleted = (index) => {
-    const filtered = input.filter(del=> del !== arr)
-    setInput(filtered)
-}
-    return (
+    return (    
         <div>
-            <input 
-                type="text"
-                value={arr}
-                onChange={(e)=> setArr(e.target.value)}
-            />
-            <ul>
-                {input
-                // 
-                .map((list, index)=> (
-                    <li key={index}>{list}<button onClick={()=>deleted(index)}>Убавить</button></li>
-                ))
-                 }
-            </ul>
-            <button onClick={open}>Добавить</button>
+            {/* <List /> */}
+            {/* <Focus /> */}
+            {/* <Timer /> */}
+            {/* <Counter /> */}
+            {/* <PlayingСards /> */}
+            <Count />
+
         </div>
     )
 }
