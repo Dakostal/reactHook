@@ -1,12 +1,12 @@
 import './App.scss'
-import { Сalculator } from './components/hook/Counter'
+import { TaskList } from './components/hook/Gallery'
 
 function App() {
-  return (
-    <>
-    <Сalculator /> 
-    </>
-  )
+    return (
+        <>
+            <TaskList />
+        </>
+    )
 }
 
 export default App
