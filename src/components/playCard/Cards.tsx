@@ -1,78 +1,13 @@
 import style from './styles.module.scss'
 
-const cards = [
-    // Буби (diamonds)
-    { numValue: 2, suit: 'diamonds', name: '2' },
-    { numValue: 3, suit: 'diamonds', name: '3' },
-    { numValue: 4, suit: 'diamonds', name: '4' },
-    { numValue: 5, suit: 'diamonds', name: '5' },
-    { numValue: 6, suit: 'diamonds', name: '6' },
-    { numValue: 7, suit: 'diamonds', name: '7' },
-    { numValue: 8, suit: 'diamonds', name: '8' },
-    { numValue: 9, suit: 'diamonds', name: '9' },
-    { numValue: 10, suit: 'diamonds', name: '10' },
-    { numValue: 11, suit: 'diamonds', name: 'J' },
-    { numValue: 12, suit: 'diamonds', name: 'Q' },
-    { numValue: 13, suit: 'diamonds', name: 'K' },
-    { numValue: 14, suit: 'diamonds', name: 'A' },
-  
-    // Черви (hearts)
-    { numValue: 2, suit: 'hearts', name: '2' },
-    { numValue: 3, suit: 'hearts', name: '3' },
-    { numValue: 4, suit: 'hearts', name: '4' },
-    { numValue: 5, suit: 'hearts', name: '5' },
-    { numValue: 6, suit: 'hearts', name: '6' },
-    { numValue: 7, suit: 'hearts', name: '7' },
-    { numValue: 8, suit: 'hearts', name: '8' },
-    { numValue: 9, suit: 'hearts', name: '9' },
-    { numValue: 10, suit: 'hearts', name: '10' },
-    { numValue: 11, suit: 'hearts', name: 'J' },
-    { numValue: 12, suit: 'hearts', name: 'Q' },
-    { numValue: 13, suit: 'hearts', name: 'K' },
-    { numValue: 14, suit: 'hearts', name: 'A' },
-  
-    // Пики (spades)
-    { numValue: 2, suit: 'spades', name: '2' },
-    { numValue: 3, suit: 'spades', name: '3' },
-    { numValue: 4, suit: 'spades', name: '4' },
-    { numValue: 5, suit: 'spades', name: '5' },
-    { numValue: 6, suit: 'spades', name: '6' },
-    { numValue: 7, suit: 'spades', name: '7' },
-    { numValue: 8, suit: 'spades', name: '8' },
-    { numValue: 9, suit: 'spades', name: '9' },
-    { numValue: 10, suit: 'spades', name: '10' },
-    { numValue: 11, suit: 'spades', name: 'J' },
-    { numValue: 12, suit: 'spades', name: 'Q' },
-    { numValue: 13, suit: 'spades', name: 'K' },
-    { numValue: 14, suit: 'spades', name: 'A' },
-  
-    // Трефы (clubs)
-    { numValue: 2, suit: 'clubs', name: '2' },
-    { numValue: 3, suit: 'clubs', name: '3' },
-    { numValue: 4, suit: 'clubs', name: '4' },
-    { numValue: 5, suit: 'clubs', name: '5' },
-    { numValue: 6, suit: 'clubs', name: '6' },
-    { numValue: 7, suit: 'clubs', name: '7' },
-    { numValue: 8, suit: 'clubs', name: '8' },
-    { numValue: 9, suit: 'clubs', name: '9' },
-    { numValue: 10, suit: 'clubs', name: '10' },
-    { numValue: 11, suit: 'clubs', name: 'J' },
-    { numValue: 12, suit: 'clubs', name: 'Q' },
-    { numValue: 13, suit: 'clubs', name: 'K' },
-    { numValue: 14, suit: 'clubs', name: 'A' }
-  ]
-
-export const Cards = () => {
-    
-    return(
+export const Cards = ({ title, image }) => {
+    return (
         <div className={style.container}>
             <div className={style.diamondsCard}>
-                {cards.map((card, index) => (
-                    <span key={index}></span>
-                ))}
-                <span className={style.diamondsCardName}>K</span>
-                <img src="../../../public/img/Diamonds.svg" alt="" className={style.diamondsSVG}/>
+                <span className={style.diamondsCardName}>{title}</span>
+                <img src={image} alt="" className={style.diamondsSVG} />
             </div>
         </div>
     )
 }
+//  сравнивать suit
