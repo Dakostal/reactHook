@@ -6,9 +6,12 @@
 // import { Count } from "./Count"
 // import { Counter } from "./Сounters"
 // import { List } from "./List"
+// import { LanguageComponent } from './useContext/languageContext/LanguageComponent'
+// import { LanguageProvider } from './useContext/languageContext/LanguageProvider'
 
-import { LanguageComponent } from "./useContext/languageContext/LanguageComponent"
-import { LanguageProvider } from "./useContext/languageContext/LanguageProvider"
+import { AuthProvider } from './useContext/authContext/AuthProvider'
+import { Navbar } from './useContext/authContext/Navbar'
+import { Profile } from './useContext/Components'
 
 // import { NewTiemr } from "./NewTimer"
 // import { Demo } from "./useEffect/Count"
@@ -27,9 +30,13 @@ export const Calculator = () => {
             {/* <ThemeProvider>
                 <ThemeComponent />
             </ThemeProvider> */}
-            <LanguageProvider>
+            {/* <LanguageProvider>
                 <LanguageComponent />
-            </LanguageProvider>
+            </LanguageProvider> */}
+            <AuthProvider>
+                <Navbar />
+                <Profile />
+            </AuthProvider>
         </div>
     )
 }
