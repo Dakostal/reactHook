@@ -4,8 +4,10 @@ import { Calculator } from './components/hook/Counter'
 function App() {
   return (
     <>
-    <Calculator /> 
+    <Calculator />
     </>
+
+
   )
 }
 
