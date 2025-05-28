@@ -1,9 +1,6 @@
 import {Profile, Sidebar} from './Components'
 
-interface DashboardProps{
-}
-
-export const Dashboard = ({}: DashboardProps) => {
+export const Dashboard = () => {
     return( 
         <div>
             <Profile />

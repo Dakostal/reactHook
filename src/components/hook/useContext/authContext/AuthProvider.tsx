@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { AuthContext, User } from './context'
 
+
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState<User>(null)
 

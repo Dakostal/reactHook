@@ -6,11 +6,10 @@ export interface User {
     name: string,
     isSubscribed: boolean,
 }
-interface DemoProprs {}
-export const Demo = ({}: DemoProprs) => {
+export const Demo = () => {
     const [user] = useState<User>({
         name: 'You',
-        isSubscribed: true
+        isSubscribed: true,
     })
     return(
         <div>

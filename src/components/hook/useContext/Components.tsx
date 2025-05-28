@@ -1,10 +1,7 @@
 import { useUserContext } from "./context"
 
-interface SidebarProps {}
 
-interface ProfileProps {}
-
-export const Sidebar = ({}: SidebarProps) => {
+export const Sidebar = () => {
     const user = useUserContext
     return(
         <div>
@@ -14,7 +11,7 @@ export const Sidebar = ({}: SidebarProps) => {
     )
 }
 
-export const Profile = ({}: ProfileProps) => {
+export const Profile = () => {
     const user = useUserContext
     return(
         <div>{user.name}</div>

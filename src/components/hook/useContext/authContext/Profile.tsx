@@ -1,14 +1,11 @@
 import { useUserContext } from './context'
 
 export const Profile = () => {
-    const { user, login } = useUserContext()
+    const { user } = useUserContext()
 
     if (!user) {
         return (
-            <div>
-                <h2>Вы не авторизованы</h2>
-                <button onClick={login}>Войти</button>
-            </div>
+            <h2>Вы не авторизованы</h2>
         )
     }
 

@@ -9,9 +9,15 @@
 // import { LanguageComponent } from './useContext/languageContext/LanguageComponent'
 // import { LanguageProvider } from './useContext/languageContext/LanguageProvider'
 
-import { AuthProvider } from './useContext/authContext/AuthProvider'
-import { Navbar } from './useContext/authContext/Navbar'
-import { Profile } from './useContext/Components'
+import { ModalComponent } from "./useContext/modalContext/ModalComponent"
+import { ModalContainer } from "./useContext/modalContext/ModalContainer"
+import { ModalProvider } from "./useContext/modalContext/ModalProvider"
+
+// import { AuthProvider } from './useContext/authContext/AuthProvider'
+// import { Navbar } from './useContext/authContext/Navbar'
+// import { Profile } from './useContext/authContext/Profile'
+// import { Article } from './useContext/uiContext/Article'
+// import { UiSettings } from './useContext/uiContext/UISettings'
 
 // import { NewTiemr } from "./NewTimer"
 // import { Demo } from "./useEffect/Count"
@@ -33,10 +39,18 @@ export const Calculator = () => {
             {/* <LanguageProvider>
                 <LanguageComponent />
             </LanguageProvider> */}
-            <AuthProvider>
-                <Navbar />
+            {/* <AuthProvider>
                 <Profile />
-            </AuthProvider>
+                <Navbar />
+            </AuthProvider> */}
+            {/* <Article>
+                <UiSettings />
+            </Article> */}
+            <ModalProvider>
+                <ModalContainer />
+                <ModalComponent />
+            </ModalProvider>
+            
         </div>
     )
 }
